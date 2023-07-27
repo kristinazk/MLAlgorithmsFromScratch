@@ -5,6 +5,25 @@ from sklearn.neighbors import KNeighborsRegressor
 
 
 class KNNRegressor:
+    """
+
+       This is a class which contains the implementation of the KNN Regressor.
+
+       Parameters:
+       n_neighbors - number of closest neighbors values of which we should consider (default = 5)
+       p - which distance metric to use (p=1 Manhattan distance, p=2 Euclidean distance etc.) (default = 2)
+
+       Methods:
+       fit(X_train, y_train) - used to fit the train data to the model
+       predict(X_test) - used to make predictions on test data
+       score(X_test, y_test) - used to calculate the score of the model
+
+       Private Methods:
+       _distance_calc - used to calculate the distance between two vectors (or a vector and a matrix) using the p value
+       specified during class initialisation
+
+       """
+
     def __init__(self, n_neighbors=5, p=2):
         self.n_neighbors = n_neighbors
         self.p = p
